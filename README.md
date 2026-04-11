@@ -1,29 +1,33 @@
-# Proyecto Devops AWS
+# DevOps AWS Project
 
 ## Descripción
-Implementación de pipeline DevOps en AWS con automatización completa.
+Este proyecto implementa un flujo DevOps en AWS utilizando:
 
-## Tecnologías
-- AWS (EC2, S3, CloudFormation, CodePipeline)
-- Docker
-- Python (Boto3)
-- Bash
+- GitHub (control de versiones)
+- AWS CloudFormation (IaC)
+- Docker (contenedores)
+- AWS CodePipeline (CI/CD)
+- AWS Systems Manager (despliegue)
+- AWS CloudWatch (monitoreo)
 
-## Funcionalidades
-- Aprovisionamiento automático de infraestructura
-- Contenerización de aplicación
-- Pipeline CI/CD
-- Monitoreo con CloudWatch
+## Estructura
 
-## Ejecución
+- docker/: aplicación web y contenedores
+- scripts/: automatización en bash
+- aws/: infraestructura y despliegue
+- python/: automatización con boto3
 
-### Scripts
-bash scripts/setup.sh
+## Requisitos
 
-### Docker
-cd docker
-docker build -t devops-app .
-docker run -p 5000:5000 devops-app
+- AWS CLI configurado
+- Docker instalado
+- Python 3 + boto3
 
-### Python
-python3 python/aws_script.py
+## Uso
+
+### 1. Crear infraestructura
+
+```bash
+aws cloudformation deploy \
+--template-file aws/cloudformation.yaml \
+--stack-name devops-stack

@@ -1,5 +1,7 @@
 __pycache__/
 *.pyc
+*.log
 .env
-node_modules/
-reporte.txt
+.DS_Store
+*.tar
+.aws/
