@@ -15,8 +15,3 @@ Este proyecto implementa un flujo DevOps en AWS utilizando:
 - scripts/: automatización en bash
 - aws/: infraestructura y despliegue
 - python/: automatización con boto3
-
-## Requisitos
-
-- Docker instalado
-- Python 3 + boto3
